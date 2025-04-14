@@ -18,9 +18,9 @@ def intersects_vertex(p1, p2, center, r):
     t2 = (-b - sqrt_disc) / (2 * a)
     return (0 < t1 < 1) or (0 < t2 < 1)
 
-def draw_graph(canvas, matrix, directed, n, offset_x=0):
+def draw_graph(canvas, matrix, directed, n, offset_x=0, offset_y=0):
     vertex_radius = 20
-    positions = get_frame_positions(n, offset_x=100 + offset_x, offset_y=100, spacing_x=120, spacing_y=100)
+    positions = get_frame_positions(n, offset_x=100 + offset_x, offset_y=offset_y, spacing_x=120, spacing_y=100)
 
     for i, (x, y) in enumerate(positions):
         canvas.create_oval(x - vertex_radius, y - vertex_radius,
