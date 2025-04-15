@@ -3,7 +3,7 @@ import random
 def generate_adjacency_matrices(n1, n2, n3, n4):
     n = n3 + 10
     seed = int(f"{n1}{n2}{n3}{n4}")
-    #k = 1.0 - n3 * 0.01 - n4 * 0.001 - 0.3
+    #k = 1.0 - n3 * 0.01 - n4 * 0.01 - 0.3
     k = 1.0 - n3 * 0.005 - n4 * 0.005 - 0.27
     random.seed(seed)
 

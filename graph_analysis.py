@@ -72,8 +72,11 @@ def build_condensation_graph(Adir, components):
     for i in range(len(Adir)):
         for j in range(len(Adir)):
             if Adir[i][j]:
+                if i not in node_to_component or j not in node_to_component:
+                    continue
                 ci = node_to_component[i]
                 cj = node_to_component[j]
+
                 if ci != cj:
                     cond_graph[ci][cj] = 1
 
